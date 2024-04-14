@@ -11,10 +11,16 @@ basic.forever(function () {
     voiceRecognition.getCMDID()
     if (voiceRecognition.checkCMDID()) {
         if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W62)) {
-            radio.sendNumber(1)
+            radio.sendNumber(62)
         }
         if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W65)) {
-            radio.sendNumber(0)
+            radio.sendNumber(65)
+        }
+        if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W103)) {
+            radio.sendNumber(103)
+        }
+        if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W104)) {
+            radio.sendNumber(104)
         }
     }
 })
