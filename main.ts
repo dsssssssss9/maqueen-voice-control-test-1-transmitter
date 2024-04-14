@@ -22,5 +22,14 @@ basic.forever(function () {
         if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W104)) {
             radio.sendNumber(104)
         }
+        if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W24)) {
+            radio.sendNumber(24)
+        }
+        if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W22)) {
+            radio.sendNumber(22)
+        }
+        if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W23)) {
+            radio.sendNumber(23)
+        }
     }
 })
