@@ -2,11 +2,11 @@ radio.setGroup(1)
 voiceRecognition.init()
 voiceRecognition.setVolume(7)
 voiceRecognition.setMuteMode(voiceRecognition.MUTE.OFF)
-voiceRecognition.setWakeTime(20)
+voiceRecognition.setWakeTime(30)
 serial.writeLine("" + (voiceRecognition.getWakeTime()))
 voiceRecognition.playByCMDID(voiceRecognition.checkWord1(voiceRecognition.WakeupWords.W2))
 serial.writeLine("==================")
-basic.showIcon(IconNames.Cow)
+basic.showIcon(IconNames.Pitchfork)
 basic.forever(function () {
     voiceRecognition.getCMDID()
     if (voiceRecognition.checkCMDID()) {
@@ -27,6 +27,9 @@ basic.forever(function () {
         }
         if (voiceRecognition.readCMDID() == voiceRecognition.checkWord2(voiceRecognition.LearningCommandWords.W6)) {
             radio.sendNumber(6)
+        }
+        if (voiceRecognition.readCMDID() == voiceRecognition.checkWord2(voiceRecognition.LearningCommandWords.W7)) {
+            radio.sendNumber(7)
         }
         if (voiceRecognition.readCMDID() == voiceRecognition.checkWord3(voiceRecognition.FixedCommandWords.W22)) {
             radio.sendNumber(22)
